@@ -1,4 +1,4 @@
-module validjsonator
+module github.com/ls6-events/validjsonator
 
 go 1.21
 
