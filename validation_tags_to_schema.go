@@ -271,6 +271,8 @@ func ValidationTagsToSchema(validationTag string) (tagSchema Schema, required bo
 			for i, str := range strs {
 				schema.Enum[i] = str
 			}
+		case "unique":
+			schema.UniqueItems = true
 
 		// Aliases
 		case "iscolor":
