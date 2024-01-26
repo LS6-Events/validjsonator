@@ -749,6 +749,13 @@ func TestValidateTagsToSchema(t *testing.T) {
 			}),
 		},
 		{
+			name:        "unique",
+			validateTag: "unique",
+			expectedSchema: allOfSchemas(Schema{
+				UniqueItems: true,
+			}),
+		},
+		{
 			name:        "iscolor",
 			validateTag: "iscolor",
 			expectedSchema: allOfSchemas(Schema{
