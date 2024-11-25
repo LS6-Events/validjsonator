@@ -659,6 +659,11 @@ func TestValidateTagsToSchema(t *testing.T) {
 			expectedSchema: singleSchemaFromPattern("^urn:[a-zA-Z0-9][a-zA-Z0-9-]{0,31}:([a-zA-Z0-9()+,\\-.:=@;$_!*'%/?#]|%[0-9a-fA-F]{2})+$"),
 		},
 		{
+			name:           "dive",
+			validateTag:    "dive",
+			expectedSchema: allOfSchemas(),
+		},
+		{
 			name:        "required",
 			validateTag: "required",
 			required:    true,

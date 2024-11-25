@@ -192,6 +192,8 @@ func ValidationTagsToSchema(validationTag string) (tagSchema Schema, required bo
 			schema.Pattern = "^urn:[a-zA-Z0-9][a-zA-Z0-9-]{0,31}:([a-zA-Z0-9()+,\\-.:=@;$_!*'%/?#]|%[0-9a-fA-F]{2})+$"
 
 		// Primitives
+		case "dive":
+			continue
 		case "required":
 			fieldRequired = true
 
